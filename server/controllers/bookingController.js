@@ -7,10 +7,13 @@ import stripe from "stripe";
 // Internal helper
 const checkAvailability = async ({ checkInDate, checkOutDate, property }) => {
   try {
+    const checkIn = new Date(checkInDate);
+    const checkOut = new Date(checkOutDate);
+
     const bookings = await Booking.find({
       property,
-      checkInDate: { $lte: checkOutDate },
-      checkOutDate: { $gte: checkInDate },
+      checkInDate: { $lte: checkOut },
+      checkOutDate: { $gte: checkIn },
     });
     const isAvailable = bookings.length === 0;
     return isAvailable;
