@@ -6,7 +6,7 @@ import { clerkMiddleware } from "@clerk/express";
 import clerkWebhooks from "./controllers/clerkWebhooks.js";
 import userRouter from "./routes/userRoute.js";
 import agencyRouter from "./routes/agencyRoute.js";
-import propertyRouter from "./routes/PropertyRoute.js";
+import propertyRouter from "./routes/propertyRoute.js";
 import bookingRouter from "./routes/bookingRoute.js";
 import connectCloudinary from "./config/cloudinary.js";
 import { stripeWebhooks } from "./controllers/stripeWebhooks.js";
