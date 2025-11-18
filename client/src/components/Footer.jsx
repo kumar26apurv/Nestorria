@@ -79,7 +79,7 @@ const Footer = () => {
                 placeholder="Your email"
               />
               <button className="btn-dark font-medium !px-3.5 py-2 mr-0.5">
-                Subscrive
+                Subscribe
               </button>
             </div>
           </div>
